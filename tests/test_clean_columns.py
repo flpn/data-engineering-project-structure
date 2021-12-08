@@ -17,3 +17,12 @@ def test_should_remove_whitespaces_from_names():
     expected = ['FIRST_NAME']
 
     assert actual == expected
+
+
+def test_should_clean_names():
+    columns = ['age', 'LAST NAME']
+
+    actual = clean_data.clean_names(columns)
+    expected = ['AGE', 'LAST_NAME']
+
+    assert actual == expected
